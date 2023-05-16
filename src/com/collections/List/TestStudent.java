@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class TeatStudent {
+public class TestStudent {
     public static void main(String[] args) {
         List<Student> st = new ArrayList<>();
         Student s1 = new Student();
