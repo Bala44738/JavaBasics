@@ -1,8 +1,6 @@
 package com.Arrays;
 
 public class CheckDuplicates {
-
-
         public static void main(String[] args) {
             int arrr [] ={5,5,6,7,7,8,9,10,11,12,12};
             int in=0;
