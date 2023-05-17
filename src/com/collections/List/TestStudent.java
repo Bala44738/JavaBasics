@@ -1,12 +1,15 @@
 package com.collections.List;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
+//import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+import java.util.Stack;
+import java.util.Vector;
 
 public class TestStudent {
     public static void main(String[] args) {
-        List<Student> st = new ArrayList<>();
+        List<Student> st = new Stack<>();
         Student s1 = new Student();
         s1.id=1001;
         s1.name= "Balu";
