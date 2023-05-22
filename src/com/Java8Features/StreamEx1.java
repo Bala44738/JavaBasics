@@ -45,7 +45,7 @@ public class StreamEx1 {
         System.out.println("Print prime numbers");
         al.stream().map((x)->{
             int count = 0;
-           for(int i=1;i< al.size();i++){
+           for(int i=1;i< x;i++){
                if (x%i==0) {
                    count++;
                }
