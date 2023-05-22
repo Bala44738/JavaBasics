@@ -3,6 +3,7 @@ package com.Java8Features;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class StreamEx1 {
@@ -41,21 +42,35 @@ public class StreamEx1 {
         al.stream().filter(x->x%2==1).forEach(x-> System.out.println(x));
 
 
-        // Print prime numbers
-        System.out.println("Print prime numbers");
-        al.stream().map((x)->{
-            int count = 0;
-           for(int i=1;i< x;i++){
-               if (x%i==0) {
-                   count++;
-               }
+        System.out.println("Printing even numbers aray using functional interface");
+        //Function<Integer,Boolean> fun = ListTest1::isEven;
+        List<Integer> it = al.stream().filter(StreamEx1:: isEven).collect(Collectors.toList());
+        System.out.println(it);
 
-           }
-           if (count==2){
-               return x;
-           }
-            return 0;
-        }).forEach(x-> System.out.println(x));
+      
+
+        // Print prime numbers
+//        System.out.println("Print prime numbers");
+//        al.stream().map((x)->{
+//            int count = 0;
+//           for(int i=1;i< x;i++){
+//               if (x%i==0) {
+//                   count++;
+//               }
+//
+//           }
+//           if (count==2){
+//               return x;
+//           }
+//            return 0;
+//        }).forEach(x-> System.out.println(x));
 
     }
+
+    private static boolean isEven(int x) {
+
+        return x%2==0;
+    }
+
+
 }
