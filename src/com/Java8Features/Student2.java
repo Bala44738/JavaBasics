@@ -91,15 +91,17 @@ public class Student2 {
             Consumer<Student2> printConsumer = x-> System.out.println(x.getId()+" "+x.getName()+" "+x.getMarks()+" "+x.getGrade());
 
             // Comparator
+//            Comparator<Student2> setfun= (x,y)->{
+//                if (x.getMarks()>y.getMarks()) {
+//                  return 1;
+//                }
+//
+//                return -1;
+//            };
+
             Comparator<Student2> setfun= (x,y)->{
-                if (x.getMarks()>y.getMarks()) {
-                  return 1;
-                }
-
-                return -1;
+               return x.getName().compareTo(y.getName());
             };
-
-
 
             al.stream().map(gradeFun).filter(gradePredi).sorted(setfun).forEach(printConsumer);
 
