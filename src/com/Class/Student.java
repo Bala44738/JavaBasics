@@ -49,9 +49,5 @@ public class Student {
             System.out.println(result.id+"  "+result.name+"  "+ result.marks);
 
         }
-
-
-
-
     }
 }
