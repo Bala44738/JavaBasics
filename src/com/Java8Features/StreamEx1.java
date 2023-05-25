@@ -10,8 +10,8 @@ public class StreamEx1 {
     public static void main(String[] args) {
         List<Integer> al = new ArrayList<>();
          al.add(5);
-        al.add(11);
         al.add(10);
+        al.add(11);
         al.add(15);
         al.add(23);
         al.add(40);
@@ -50,25 +50,23 @@ public class StreamEx1 {
       
 
         // Print prime numbers
-//        System.out.println("Print prime numbers");
-//        al.stream().map((x)->{
-//            int count = 0;
-//           for(int i=1;i< x;i++){
-//               if (x%i==0) {
-//                   count++;
-//               }
-//
-//           }
-//           if (count==2){
-//               return x;
-//           }
-//            return 0;
-//        }).forEach(x-> System.out.println(x));
+        System.out.println("Print prime numbers");
+        IntStream.range(0,al.size()).map((x)->{
+            int count = 0;
+           for(int i=2;i<x;i++){
+               if (x%i==0) {
+                   count++;
+               }
 
+           }
+           if (count==0){
+               return x;
+           }
+            return 0;
+        }).forEach(x-> System.out.println(al.get(x)));
     }
 
     private static boolean isEven(int x) {
-
         return x%2==0;
     }
 
